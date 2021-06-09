@@ -16,3 +16,4 @@
 - Icons: https://iconscout.com/unicons
 - Fonts: https://fonts.google.com/
 - Swiper: https://swiperjs.com/
+- Remove the background from an image: https://www.remove.bg/
