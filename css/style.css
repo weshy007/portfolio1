@@ -133,7 +133,7 @@ img{
     height: auto;
 }
 
-    /*  Reusable CSS Classes*/
+    /*============= Reusable CSS Classes =========*/
 .section{
     padding: 2rem 0 4rem;
 }
@@ -410,7 +410,8 @@ img{
 .about__info-name{
     font-size: var(--small-font-size);
 }
-.about__info-title, .about__info-name{
+.about__info-title, 
+.about__info-name{
     display: block;
     text-align: center;
 }
