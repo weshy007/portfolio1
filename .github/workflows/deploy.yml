@@ -18,7 +18,7 @@ jobs:
 
       - name: Build and deploy
         run: |
-          netlify login -a $NETLIFY_AUTH_TOKEN # Set NETLIFY_AUTH_TOKEN as a secret in your GitHub repository
+          echo -e "machine api.netlify.com\n  login $NETLIFY_AUTH_TOKEN" > ~/.netlify/config
           netlify deploy --prod
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
