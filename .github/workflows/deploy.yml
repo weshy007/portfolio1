@@ -1,0 +1,26 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Netlify CLI
+        run: npm install -g netlify-cli
+
+      - name: Build and deploy
+        run: |
+          npm install # or any other build commands
+          netlify login -a $NETLIFY_AUTH_TOKEN # Set NETLIFY_AUTH_TOKEN as a secret in your GitHub repository
+          netlify deploy --prod
